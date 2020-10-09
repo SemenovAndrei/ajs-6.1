@@ -1,11 +1,13 @@
 /* eslint-disable no-console */
-// TODO: write your code here
-import Bowman from './characters/bowman';
+import orderByProps from './orderbyprops';
 
-// eslint-disable-next-line no-console
-console.log('worked');
+const obj = {
+  name: 'мечник',
+  health: 10,
+  level: 2,
+  attack: 80,
+  defence: 40,
+};
 
-const result = new Bowman('Alex');
-result.damage(50);
-result.levelUp();
-console.log(result);
+
+console.log(orderByProps(obj, ['name', 'level']));
